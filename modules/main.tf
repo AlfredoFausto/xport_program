@@ -11,7 +11,7 @@ terraform {
 
 module "DB" {
 	source = "./DBInstance/"
-	db_port = "${aws_security_group.rds-tr.from_port}"
+	db_port = "${var.rds_server_port}"
 }
 
 module "AutoScaling" {
